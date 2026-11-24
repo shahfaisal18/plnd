@@ -1,0 +1,6 @@
+{
+  "name": "Illurei Entertainment",
+  "description": "Illurei Environmental Innovations & Entertainment — Inspiring healthy future cities, original film and television productions, and music.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
