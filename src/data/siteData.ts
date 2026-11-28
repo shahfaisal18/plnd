@@ -1,7 +1,9 @@
 import { EntertainmentProject, MusicTrack } from '../types';
 
+export const CLIENT_LOGO_URL = '/assets/aistudio/1000090568_71be6e83.png';
+export const INNOVATIONS_EXTERNAL_URL = 'https://illurei.vercel.app/';
+export const CORPORATE_VIDEO_URL = '/assets/aistudio/1000089678_898abdbd.mp4';
 export const IMDB_PROFILE_URL = 'https://www.imdb.com/name/nm5042217/';
-
 export const PRESS_RELEASE_PDF_URL = '/assets/aistudio/USA_FOR_IMMEDIATE_RELEASE_8d51684f.pdf';
 
 export const PRESS_RELEASE_DATA = {
@@ -54,6 +56,15 @@ export const PRESS_RELEASE_DATA = {
     },
   ],
 };
+
+export const ENTERTAINMENT_STREAMING_LINKS = [
+  {
+    label: 'United – Smart Link / Direct Song',
+    platform: 'United (Smart Link)',
+    url: 'https://found.ee/3eG2c',
+  },
+  ...PRESS_RELEASE_DATA.streamingLinks,
+];
 
 export const CONTACT_INFO = {
   emails: [
@@ -227,45 +238,39 @@ export const ENTERTAINMENT_PROJECTS: EntertainmentProject[] = [
   },
 ];
 
+// Client music catalog only: Time of Greatness, United, and LEVON (removed unrecognized filler tracks)
 export const DEFAULT_MUSIC_TRACKS: MusicTrack[] = [
   {
     id: 'time-of-greatness',
     title: 'Time of Greatness (feat. Stony Point)',
-    artist: 'Ivon Skula · Stony Point',
+    artist: 'Ivon Skula',
     project: 'Flagship Single Release',
     durationSec: 212,
     bpm: 98,
-    rootHz: 246.94, // B3
-    chordHz: [246.94, 293.66, 369.99, 440.0], // Bm7
+    rootHz: 246.94,
+    chordHz: [246.94, 293.66, 369.99, 440.0],
+    externalUrl: 'https://found.ee/e49pVy',
   },
   {
-    id: 'levon-overture',
-    title: 'LEVON (Stage Overture)',
-    artist: 'Ivon Skula · Live Keys Session',
+    id: 'united',
+    title: 'United',
+    artist: 'Ivon Skula',
+    project: 'Illurei Music Release',
+    durationSec: 204,
+    bpm: 92,
+    rootHz: 261.63,
+    chordHz: [261.63, 329.63, 392.0, 493.88],
+    audioUrl: '/audio/united.mp3',
+    externalUrl: 'https://found.ee/3eG2c',
+  },
+  {
+    id: 'levon',
+    title: 'LEVON',
+    artist: 'Ivon Skula',
     project: 'Original Album LEVON',
     durationSec: 194,
     bpm: 96,
-    rootHz: 220, // A3
-    chordHz: [220, 261.63, 329.63, 392.0], // Am7
-  },
-  {
-    id: 'bio-cities-horizon',
-    title: 'Future Cities Horizon',
-    artist: 'Illurei Sound Lab',
-    project: 'Bio Cities Project Score',
-    durationSec: 218,
-    bpm: 84,
-    rootHz: 196, // G3
-    chordHz: [196, 246.94, 293.66, 369.99], // Gmaj7
-  },
-  {
-    id: 'the-thought-pulse',
-    title: 'Glass Corridor (Main Theme)',
-    artist: 'Illurei Score Ensemble',
-    project: 'The Thought',
-    durationSec: 176,
-    bpm: 108,
-    rootHz: 146.83, // D3
-    chordHz: [146.83, 174.61, 220.0, 261.63], // Dm7
+    rootHz: 220,
+    chordHz: [220, 261.63, 329.63, 392.0],
   },
 ];

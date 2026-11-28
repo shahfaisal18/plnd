@@ -69,11 +69,10 @@ export function ContactSection({ prefill, onNavigateSection }: ContactSectionPro
 
   return (
     <div className="w-full bg-white">
-      {/* Main Get In Touch Block — Matches illurei.vercel.app Contact layout */}
       <section className="py-16 sm:py-24">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto">
-            <p className="text-xs sm:text-sm font-semibold uppercase tracking-widest text-emerald-600">
+            <p className="text-xs sm:text-sm font-semibold uppercase tracking-widest text-[#0082b8]">
               Contact Illurei
             </p>
             <h1 className="mt-2 font-display text-3xl sm:text-5xl font-bold tracking-tight text-slate-900">
@@ -87,9 +86,8 @@ export function ContactSection({ prefill, onNavigateSection }: ContactSectionPro
           <div className="mt-14 grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
             {/* Left Column: Contact Details */}
             <div className="lg:col-span-5 space-y-8">
-              {/* Email */}
               <div className="flex items-start gap-4">
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-emerald-50 text-emerald-600">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-sky-50 text-[#0082b8] border border-sky-100">
                   <Mail className="h-5 w-5" />
                 </div>
                 <div className="space-y-1.5">
@@ -98,7 +96,7 @@ export function ContactSection({ prefill, onNavigateSection }: ContactSectionPro
                     <div key={item.address}>
                       <a
                         href={`mailto:${item.address}`}
-                        className="text-sm font-medium text-slate-700 hover:text-emerald-700 underline decoration-slate-300 hover:decoration-emerald-600 underline-offset-4 transition-colors block"
+                        className="text-sm font-medium text-slate-700 hover:text-[#0082b8] underline decoration-slate-300 hover:decoration-[#00adef] underline-offset-4 transition-colors block"
                       >
                         {item.address}
                       </a>
@@ -107,9 +105,8 @@ export function ContactSection({ prefill, onNavigateSection }: ContactSectionPro
                 </div>
               </div>
 
-              {/* Phone */}
               <div className="flex items-start gap-4">
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-emerald-50 text-emerald-600">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-amber-50 text-[#d97706] border border-amber-100">
                   <Phone className="h-5 w-5" />
                 </div>
                 <div className="space-y-1.5">
@@ -118,7 +115,7 @@ export function ContactSection({ prefill, onNavigateSection }: ContactSectionPro
                     <div key={phone.display}>
                       <a
                         href={phone.href}
-                        className="text-sm font-medium text-slate-700 hover:text-emerald-700 transition-colors tabular-nums block"
+                        className="text-sm font-medium text-slate-700 hover:text-[#0082b8] transition-colors tabular-nums block"
                       >
                         {phone.display}
                       </a>
@@ -127,9 +124,8 @@ export function ContactSection({ prefill, onNavigateSection }: ContactSectionPro
                 </div>
               </div>
 
-              {/* Location */}
               <div className="flex items-start gap-4">
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-emerald-50 text-emerald-600">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-sky-50 text-[#0082b8] border border-sky-100">
                   <MapPin className="h-5 w-5" />
                 </div>
                 <div className="space-y-1">
@@ -151,9 +147,9 @@ export function ContactSection({ prefill, onNavigateSection }: ContactSectionPro
                 </h2>
 
                 {submitted ? (
-                  <div className="mt-6 rounded-xl border border-emerald-200 bg-emerald-50/70 p-6">
+                  <div className="mt-6 rounded-xl border border-sky-200 bg-sky-50/60 p-6">
                     <div className="flex items-start gap-3">
-                      <CheckCircle2 className="h-6 w-6 text-emerald-600 shrink-0 mt-0.5" />
+                      <CheckCircle2 className="h-6 w-6 text-[#0082b8] shrink-0 mt-0.5" />
                       <div>
                         <h3 className="font-display text-base font-bold text-slate-900">
                           Message prepared for delivery
@@ -163,7 +159,7 @@ export function ContactSection({ prefill, onNavigateSection }: ContactSectionPro
                           directly in your email client to send to{' '}
                           <a
                             href="mailto:illureiinc@gmail.com"
-                            className="font-semibold text-emerald-700 underline"
+                            className="font-semibold text-[#0082b8] underline"
                           >
                             illureiinc@gmail.com
                           </a>
@@ -172,7 +168,7 @@ export function ContactSection({ prefill, onNavigateSection }: ContactSectionPro
                         <div className="mt-4 flex flex-wrap gap-3">
                           <a
                             href={mailtoDraftHref}
-                            className="inline-flex items-center gap-2 rounded-lg bg-emerald-600 px-4 py-2 text-sm font-semibold text-white hover:bg-emerald-700 transition-colors"
+                            className="inline-flex items-center gap-2 rounded-lg bg-[#0082b8] px-4 py-2 text-sm font-semibold text-white hover:bg-[#006994] transition-colors"
                           >
                             <Send className="h-4 w-4" />
                             <span>Open in Email App</span>
@@ -208,7 +204,7 @@ export function ContactSection({ prefill, onNavigateSection }: ContactSectionPro
                           value={name}
                           onChange={(e) => setName(e.target.value)}
                           required
-                          className="w-full rounded-lg border border-slate-200 px-3.5 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-emerald-600 focus:outline-none"
+                          className="w-full rounded-lg border border-slate-200 px-3.5 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-[#00adef] focus:outline-none"
                         />
                       </div>
                       <div>
@@ -222,7 +218,7 @@ export function ContactSection({ prefill, onNavigateSection }: ContactSectionPro
                           value={email}
                           onChange={(e) => setEmail(e.target.value)}
                           required
-                          className="w-full rounded-lg border border-slate-200 px-3.5 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-emerald-600 focus:outline-none"
+                          className="w-full rounded-lg border border-slate-200 px-3.5 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-[#00adef] focus:outline-none"
                         />
                       </div>
                     </div>
@@ -238,7 +234,7 @@ export function ContactSection({ prefill, onNavigateSection }: ContactSectionPro
                         value={subject}
                         onChange={(e) => setSubject(e.target.value)}
                         required
-                        className="w-full rounded-lg border border-slate-200 px-3.5 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-emerald-600 focus:outline-none"
+                        className="w-full rounded-lg border border-slate-200 px-3.5 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-[#00adef] focus:outline-none"
                       />
                     </div>
 
@@ -253,7 +249,7 @@ export function ContactSection({ prefill, onNavigateSection }: ContactSectionPro
                         value={message}
                         onChange={(e) => setMessage(e.target.value)}
                         required
-                        className="w-full rounded-lg border border-slate-200 px-3.5 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-emerald-600 focus:outline-none resize-y"
+                        className="w-full rounded-lg border border-slate-200 px-3.5 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-[#00adef] focus:outline-none resize-y"
                       />
                     </div>
 
@@ -265,7 +261,7 @@ export function ContactSection({ prefill, onNavigateSection }: ContactSectionPro
 
                     <button
                       type="submit"
-                      className="w-full rounded-lg bg-emerald-600 px-5 py-3 text-sm font-semibold text-white hover:bg-emerald-700 transition-colors cursor-pointer"
+                      className="w-full rounded-lg bg-[#0082b8] px-5 py-3 text-sm font-semibold text-white hover:bg-[#006994] transition-colors cursor-pointer"
                     >
                       Send Message
                     </button>
@@ -286,8 +282,8 @@ export function ContactSection({ prefill, onNavigateSection }: ContactSectionPro
           </p>
 
           {newsletterSuccess ? (
-            <div className="mt-5 inline-flex items-center gap-2 rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-2.5 text-sm font-medium text-emerald-800">
-              <CheckCircle2 className="h-4 w-4 text-emerald-600" />
+            <div className="mt-5 inline-flex items-center gap-2 rounded-lg border border-sky-200 bg-sky-50 px-4 py-2.5 text-sm font-medium text-[#006994]">
+              <CheckCircle2 className="h-4 w-4 text-[#0082b8]" />
               <span>Thank you for subscribing to Illurei updates.</span>
             </div>
           ) : (
@@ -306,11 +302,11 @@ export function ContactSection({ prefill, onNavigateSection }: ContactSectionPro
                 value={newsletterEmail}
                 onChange={(e) => setNewsletterEmail(e.target.value)}
                 required
-                className="flex-1 rounded-lg border border-slate-200 bg-white px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-emerald-600 focus:outline-none"
+                className="flex-1 rounded-lg border border-slate-200 bg-white px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-[#00adef] focus:outline-none"
               />
               <button
                 type="submit"
-                className="rounded-lg bg-emerald-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-emerald-700 transition-colors cursor-pointer whitespace-nowrap"
+                className="rounded-lg bg-[#0082b8] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#006994] transition-colors cursor-pointer whitespace-nowrap"
               >
                 Subscribe
               </button>
@@ -334,10 +330,10 @@ export function ContactSection({ prefill, onNavigateSection }: ContactSectionPro
             </button>
             <button
               type="button"
-              onClick={() => onNavigateSection('innovations')}
+              onClick={() => onNavigateSection('welcome')}
               className="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-100 transition-colors cursor-pointer"
             >
-              <span>Return to Innovations</span>
+              <span>Return to Welcome</span>
             </button>
           </div>
         </div>

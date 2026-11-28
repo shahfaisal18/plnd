@@ -49,11 +49,11 @@ export function LegalModal({ docType, onClose }: LegalModalProps) {
               </p>
               <p>
                 We do not sell or rent personal contact details to third parties. For questions or data removal requests, please email{' '}
-                <a href="mailto:illureiinc@gmail.com" className="text-emerald-700 font-medium underline">
+                <a href="mailto:illureiinc@gmail.com" className="text-[#0082b8] font-medium underline">
                   illureiinc@gmail.com
                 </a>{' '}
                 or{' '}
-                <a href="mailto:contact@luminouscapital.com" className="text-emerald-700 font-medium underline">
+                <a href="mailto:contact@luminouscapital.com" className="text-[#0082b8] font-medium underline">
                   contact@luminouscapital.com
                 </a>.
               </p>

@@ -7,21 +7,23 @@ import { InnovationsSection } from './components/InnovationsSection';
 import { IntroLogoAnimation } from './components/IntroLogoAnimation';
 import { LegalDocType, LegalModal } from './components/LegalModal';
 import { Navbar } from './components/Navbar';
+import { WelcomeSection } from './components/WelcomeSection';
 import { ContactInquiryPrefill, SectionId } from './types';
 
 const SECTION_ORDER: Record<SectionId, number> = {
-  innovations: 0,
-  entertainment: 1,
-  contact: 2,
+  welcome: 0,
+  about: 1,
+  entertainment: 2,
+  contact: 3,
 };
 
 function getInitialSection(): SectionId {
-  if (typeof window === 'undefined') return 'innovations';
+  if (typeof window === 'undefined') return 'welcome';
   const hash = window.location.hash.replace('#', '').toLowerCase();
-  if (hash === 'entertainment' || hash === 'contact' || hash === 'innovations') {
+  if (hash === 'about' || hash === 'entertainment' || hash === 'contact' || hash === 'welcome') {
     return hash;
   }
-  return 'innovations';
+  return 'welcome';
 }
 
 const slideVariants = {
@@ -83,7 +85,7 @@ export default function App() {
   );
 
   return (
-    <div className="min-h-screen flex flex-col bg-white text-slate-900">
+    <div className="min-h-screen flex flex-col bg-white text-slate-900 selection:bg-sky-100 selection:text-[#006994]">
       <IntroLogoAnimation />
 
       <Navbar
@@ -106,7 +108,10 @@ export default function App() {
               ease: [0.16, 1, 0.3, 1],
             }}
           >
-            {activeSection === 'innovations' && (
+            {activeSection === 'welcome' && (
+              <WelcomeSection onNavigateSection={(s) => handleSelectSection(s)} />
+            )}
+            {activeSection === 'about' && (
               <InnovationsSection onNavigateSection={handleSelectSection} />
             )}
             {activeSection === 'entertainment' && (

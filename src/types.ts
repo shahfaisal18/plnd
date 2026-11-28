@@ -1,4 +1,4 @@
-export type SectionId = 'innovations' | 'entertainment' | 'contact';
+export type SectionId = 'welcome' | 'about' | 'entertainment' | 'contact';
 
 export interface EntertainmentProject {
   id: string;
@@ -24,6 +24,7 @@ export interface MusicTrack {
   rootHz: number;
   chordHz: number[];
   audioUrl?: string;
+  externalUrl?: string;
 }
 
 export interface ContactInquiryPrefill {

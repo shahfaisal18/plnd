@@ -4,6 +4,10 @@
   --font-display: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
   --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --color-brand-cyan: #00adef;
+  --color-brand-cyan-deep: #0082b8;
+  --color-brand-gold: #f59e0b;
+  --color-brand-gold-soft: #fde047;
 }
 
 @layer base {

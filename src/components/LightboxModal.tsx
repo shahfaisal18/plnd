@@ -69,7 +69,7 @@ export function LightboxModal({
             type="button"
             onClick={() => onNavigate((activeIndex - 1 + projects.length) % projects.length)}
             aria-label="Previous project artwork"
-            className="absolute left-3 top-1/2 -translate-y-1/2 flex h-10 w-10 items-center justify-center rounded-full bg-slate-900/80 text-white hover:bg-emerald-600 transition-colors cursor-pointer"
+            className="absolute left-3 top-1/2 -translate-y-1/2 flex h-10 w-10 items-center justify-center rounded-full bg-slate-900/80 text-white hover:bg-[#0082b8] transition-colors cursor-pointer"
           >
             <ChevronLeft className="h-5 w-5" />
           </button>
@@ -77,7 +77,7 @@ export function LightboxModal({
             type="button"
             onClick={() => onNavigate((activeIndex + 1) % projects.length)}
             aria-label="Next project artwork"
-            className="absolute right-3 top-1/2 -translate-y-1/2 flex h-10 w-10 items-center justify-center rounded-full bg-slate-900/80 text-white hover:bg-emerald-600 transition-colors cursor-pointer"
+            className="absolute right-3 top-1/2 -translate-y-1/2 flex h-10 w-10 items-center justify-center rounded-full bg-slate-900/80 text-white hover:bg-[#0082b8] transition-colors cursor-pointer"
           >
             <ChevronRight className="h-5 w-5" />
           </button>
@@ -86,14 +86,14 @@ export function LightboxModal({
         {/* Details Column */}
         <div className="w-full lg:w-80 shrink-0 border-t lg:border-t-0 lg:border-l border-slate-800 p-6 text-slate-100 flex flex-col justify-between overflow-y-auto">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-wider text-emerald-400">
+            <p className="text-xs font-semibold uppercase tracking-wider text-[#38bdf8]">
               {current.format}
             </p>
             <h3 className="mt-1 font-display text-2xl font-bold text-white">
               {current.title}
             </h3>
             <p className="mt-1 text-sm text-slate-400">{current.subtitle}</p>
-            <p className="mt-4 text-sm italic text-emerald-200/90">
+            <p className="mt-4 text-sm italic text-amber-200/90">
               “{current.tagline}”
             </p>
             <p className="mt-4 text-sm leading-relaxed text-slate-300">
